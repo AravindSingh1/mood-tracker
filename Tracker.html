@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Tracker.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Mood Tracker</title>
+        <script src="https://code.highcharts.com/highcharts.js" crossorigin="anonymous"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js" crossorigin="anonymous"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js" crossorigin="anonymous"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="wrapper">
+
+        <div class="mainCalander">
+            <div class="month-year">
+                <i class="fa-solid fa-caret-left"></i>
+                <p class="monthYear">Nov 2023</p>
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+
+            <div class="calander">
+                <div class="days">
+                    <div class="sunday eachday">S</div>
+                    <div class="monday eachday">M</div>
+                    <div class="tuesday eachday">T</div>
+                    <div class="wednesday eachday">W</div>
+                    <div class="thursday eachday">T</div>
+                    <div class="friday eachday">F</div>
+                    <div class="saturday eachday">S</div>
+                </div>
+                <div class="dates">
+
+                </div>
+            </div>
+
+            <div class="mood">
+                <p>How's your mood ?</p>
+                <p class="emojis">
+                    <span id="happy">😊</span>
+                    <span id="sad">😢</span>
+                    <span id="VerySad">😭</span>
+                    <span id="Angry">😡</span>
+                    <span id="Depressed">😕</span>
+                </p>
+                <textarea name="text" id="dayText" placeholder="Write about your day"></textarea>
+                <button id="moodSetButton">done</button>
+            </div>
+        </div>
+
+
+        <div class="home">
+            <div class="greet">
+                <h2>Tracker</h2>
+                <h1>Hello, <span>Welcome</span></h1>
+            </div>
+
+            <div class="cat-whole">
+                <div class="cat">
+                  <div class="ear ear--left"></div>
+                  <div class="ear ear--right"></div>
+                  <div class="face">
+                    <div class="eye eye--left">
+                      <div class="eye-pupil"></div>
+                    </div>
+                    <div class="eye eye--right">
+                      <div class="eye-pupil"></div>
+                    </div>
+                    <div class="muzzle"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="stocks">
+                <h2>Stocks today</h2>
+                <div class="amzn">
+                    <div class="amzStock"><span>AMZN</span><span id="amzStockPrice">133.97</span></div>
+                    <div class="amzStockUpDown"><span id="amzStockUpDownValue">0.73 </span><span id="amzStockUpDownArrow"><i class="fa-solid fa-down-long"></i></span></div>
+                </div>
+                <div class="google">
+                    <div class="gStock"><span>Google</span><span id="gStockPrice">133.97</span></div>
+                    <div class="gStockUpDown"><span id="gStockUpDownValue">0.73 </span><span id="gStockUpDownArrow"><i class="fa-solid fa-down-long"></i></span></div>
+                </div>
+                <div class="apple">
+                    <div class="AStock"><span>Apple</span><span id="AStockPrice">133.97</span></div>
+                    <div class="AStockUpDown"><span id="AStockUpDownValue">0.73 </span><span id="AStockUpDownArrow"><i class="fa-solid fa-down-long"></i></span></div>
+                </div>
+                <div class="McrSft">
+                    <div class="MStock"><span>MSFT</span><span id="MStockPrice">133.97</span></div>
+                    <div class="MStockUpDown"><span id="MStockUpDownValue">0.73 </span><span id="MStockUpDownArrow"><i class="fa-solid fa-up-long"></i></span></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="graphs">
+            <div class="graph" id="graph"></div>
+        </div>
+
+    </section>
+    <section class="bottom">
+        <i class="fa-solid fa-calendar-days" id="calIcon"></i>
+        <i class="fa-solid fa-house" id="homeIcon"></i>
+        <i class="fa-solid fa-chart-simple" id="barGraphIcon"></i>
+    </section>
+</body>
+<script src="Calander.js" defer></script>
+<script src="graph.js" async defer></script>
+<script src="stocks.js" async defer></script>
+</html>
